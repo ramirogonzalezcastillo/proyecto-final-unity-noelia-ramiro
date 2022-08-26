@@ -436,7 +436,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216446061}
-  m_LocalRotation: {x: 0.0642026, y: -0.058862776, z: 0.0037935881, w: 0.99619216}
+  m_LocalRotation: {x: 0.0642026, y: -0.058862787, z: 0.0037935888, w: 0.99619216}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1730,11 +1730,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4475381549599444, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
   m_PrefabInstance: {fileID: 1330769323}
   m_PrefabAsset: {fileID: 0}
---- !u!143 &1314415469 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 6174068308781634252, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
-  m_PrefabInstance: {fileID: 1330769323}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1330769323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1742,21 +1737,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 551752807, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.223
-      objectReference: {fileID: 0}
-    - target: {fileID: 551752807, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0951
-      objectReference: {fileID: 0}
     - target: {fileID: 1697376163950808, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
       propertyPath: m_Name
       value: TTBoyB
-      objectReference: {fileID: 0}
-    - target: {fileID: 1697376163950808, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4475381549599444, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
       propertyPath: m_RootOrder
@@ -1806,10 +1789,6 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 282840814}
-    - target: {fileID: 7068158379685455038, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 1314415469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20158afae7a5854681c1c8c31dfed9b, type: 3}
 --- !u!1001 &1347116574
