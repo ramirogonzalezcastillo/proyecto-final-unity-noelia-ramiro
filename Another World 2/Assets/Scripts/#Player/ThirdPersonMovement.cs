@@ -23,17 +23,34 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField]
     Animator playerAnimator;
 
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2;
-            playerAnimator.SetBool("jumping", false);
+           playerAnimator.SetBool("jumping", false);
+           playerAnimator.SetBool("punch", false);
         }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if (Input.GetKey(KeyCode.X) && isGrounded)
+        {
+            if (!IsAnimation("punch")) playerAnimator.SetBool("punch", true);
+        }
+        if (!isGrounded)
+        {
+            playerAnimator.SetBool("walking", false);
+            playerAnimator.SetBool("running", false);
+            playerAnimator.SetBool("jumping", false);
+            playerAnimator.SetBool("punch", true);
+        }
+
+
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -70,5 +87,10 @@ public class ThirdPersonMovement : MonoBehaviour
             playerAnimator.SetBool("running", false);
             playerAnimator.SetBool("jumping", true);
         }
+    }
+
+    private bool IsAnimation(string animName)
+    {
+        return playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animName);
     }
 }
